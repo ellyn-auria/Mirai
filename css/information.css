@@ -1,0 +1,281 @@
+.information-page {
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+.info-header-card {
+    background: var(--white);
+    padding: 25px 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 7px;
+}
+
+.info-header-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.icon-circle-large {
+    width: 55px;
+    height: 55px;
+    background: #5B8EC4;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-circle-large img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.info-header-left h1 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    color: var(--dark-blue); 
+}
+
+.info-header-left p { 
+    margin: 4px 0 0; 
+    color: var(--gray-text); 
+    font-size: 0.9rem; 
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.section-header ul {
+  padding-left: 20px;
+}
+
+.lead-text {
+    line-height: 25px !important;
+    font-size: 14px !important;   
+    color: #4a5568 !important;   
+}
+
+.content-section {
+  padding: 20px 0;
+}
+
+.content-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.content-card p,
+.hero-text p,
+.info-box p {
+  font-size: 14px !important;
+  line-height: 1.6;
+}
+
+.content-card ul{
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.info-box {
+  background: #eff6ff;
+  border: 1px solid rgba(44, 82, 130, 0.15);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.info-box h3 {
+  margin: 0 0 10px;
+  color: var(--dark-blue);
+  font-size: 14px;
+}
+
+.info-box ul {
+  margin: 10px 0 0;
+  color: var(--gray-text);
+  font-size: 13px;
+}
+.info-box ul li {
+  margin-bottom: 5px;
+}
+
+.accordion-item .info-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.info-box-header h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.info-box-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+}
+
+.accordion-item.active .info-box-content {
+  max-height: 500px;
+}
+
+.info-box-header .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  font-size: 16px;
+  color: var(--dark-blue);
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.info-box-content ul {
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 15px; 
+  color: var(--gray-text, #718096);
+  font-size: 13px;
+}
+
+.notice-box strong {
+  color: #2c5282;
+}
+
+.notice-box p{
+  color: #2c5282;
+}
+
+.notice-box {
+  background-color: #eff6ff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #bee3f8;
+  margin-top: 20px;
+}
+
+.therapy-grid {
+  display: flex;             
+  gap: 35px;                 
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.therapy-list-wrapper {
+  flex: 55;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.therapy-list-wrapper .info-box {
+  margin-bottom: 0;         
+}
+
+.therapy-video-wrapper {
+  flex: 40;
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.therapy-video-wrapper iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;     
+  border-radius: 16px;       
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+.video-container {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container iframe {
+  position: static; 
+  width: 480px;
+  height: 270px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 992px) {
+
+    .therapy-grid {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .information-page {
+        padding: 25px 0;
+    }
+
+    .info-header-card {
+        padding: 18px;
+    }
+
+    .icon-circle-large {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-circle-large img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .info-header-left h1 {
+        font-size: 22px;
+    }
+
+    .info-header-left p {
+        font-size: 13px;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+
+    .therapy-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .video-container iframe,
+    .therapy-video-wrapper iframe {
+        width: 100%;
+        height: auto;
+    }
+}

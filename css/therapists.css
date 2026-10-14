@@ -1,0 +1,203 @@
+.therapist-page { padding: 40px 0; min-height: 80vh; }
+
+.therapist-header {
+    background: var(--white);
+    padding: 25px 30px 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.header-flex { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; /* Disamakan dengan gap News */
+    margin-bottom: 25px; 
+}
+
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    background: #5B8EC4; /* Warna dasar biru link */
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-circle img.section-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.header-flex h1 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    color: var(--dark-blue); 
+}
+
+.header-flex p { 
+    margin: 4px 0 0; 
+    color: var(--gray-text); 
+    font-size: 0.9rem; 
+}
+
+.filter-group { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+
+.filter-btn {
+    padding: 8px 18px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--gray-text);
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.results-info { font-size: 13px; color: #888; margin-top: 15px; margin-bottom: 0; }
+
+.therapist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.therapist-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+
+.therapist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(91, 142, 196, 0.45);
+    border-color: transparent;
+}
+
+.profile-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f8fbff;
+}
+
+.therapist-card h3 { margin: 10px 0 5px; font-size: 18px; }
+
+.specialty-tag {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-desc { font-size: 13px; color: var(--gray-text); margin-bottom: 20px; min-height: 40px; }
+
+.contact-details {
+    text-align: left;
+    font-size: 12px;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 15px;
+    color: var(--gray-text);
+}
+
+.contact-item { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+
+.notice-box {
+    background: #eff6ff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 13px;
+    color: #2c5282;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.filter-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.filter-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+@media (max-width: 992px) {
+
+    .therapist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .therapist-page {
+        padding: 25px 0;
+    }
+
+    .therapist-header {
+        padding: 18px;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-circle img.section-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-flex h1 {
+        font-size: 22px;
+    }
+
+    .header-flex p {
+        font-size: 13px;
+    }
+
+    .filter-group {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
+
+    .therapist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .therapist-card {
+        padding: 20px;
+    }
+}
